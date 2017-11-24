@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		3E795C551FC88D7500258D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E795C541FC88D7500258D81 /* AppDelegate.swift */; };
-		3E795C571FC88D7500258D81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E795C561FC88D7500258D81 /* ViewController.swift */; };
 		3E795C5A1FC88D7500258D81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E795C581FC88D7500258D81 /* Main.storyboard */; };
 		3E795C5C1FC88D7500258D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E795C5B1FC88D7500258D81 /* Assets.xcassets */; };
 		3E795C5F1FC88D7500258D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E795C5D1FC88D7500258D81 /* LaunchScreen.storyboard */; };
+		3E795C671FC88D9B00258D81 /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E795C661FC88D9B00258D81 /* PlaceData.swift */; };
+		3E795C691FC88E9800258D81 /* PlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E795C681FC88E9800258D81 /* PlaceListViewController.swift */; };
+		3E795C6B1FC8933700258D81 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E795C6A1FC8933700258D81 /* DetailViewController.swift */; };
+		3E795C6F1FC89E6000258D81 /* UINavigationController+preferredStatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E795C6E1FC89E6000258D81 /* UINavigationController+preferredStatusBarStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E795C511FC88D7500258D81 /* Snacktacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snacktacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E795C541FC88D7500258D81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3E795C561FC88D7500258D81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E795C591FC88D7500258D81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E795C5B1FC88D7500258D81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E795C5E1FC88D7500258D81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E795C601FC88D7500258D81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E795C661FC88D9B00258D81 /* PlaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
+		3E795C681FC88E9800258D81 /* PlaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewController.swift; sourceTree = "<group>"; };
+		3E795C6A1FC8933700258D81 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3E795C6E1FC89E6000258D81 /* UINavigationController+preferredStatusBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+preferredStatusBarStyle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				3E795C541FC88D7500258D81 /* AppDelegate.swift */,
-				3E795C561FC88D7500258D81 /* ViewController.swift */,
+				3E795C6E1FC89E6000258D81 /* UINavigationController+preferredStatusBarStyle.swift */,
+				3E795C681FC88E9800258D81 /* PlaceListViewController.swift */,
+				3E795C6A1FC8933700258D81 /* DetailViewController.swift */,
 				3E795C581FC88D7500258D81 /* Main.storyboard */,
 				3E795C5B1FC88D7500258D81 /* Assets.xcassets */,
 				3E795C5D1FC88D7500258D81 /* LaunchScreen.storyboard */,
 				3E795C601FC88D7500258D81 /* Info.plist */,
+				3E795C661FC88D9B00258D81 /* PlaceData.swift */,
 			);
 			path = Snacktacular;
 			sourceTree = "<group>";
@@ -136,8 +145,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E795C571FC88D7500258D81 /* ViewController.swift in Sources */,
+				3E795C691FC88E9800258D81 /* PlaceListViewController.swift in Sources */,
 				3E795C551FC88D7500258D81 /* AppDelegate.swift in Sources */,
+				3E795C671FC88D9B00258D81 /* PlaceData.swift in Sources */,
+				3E795C6F1FC89E6000258D81 /* UINavigationController+preferredStatusBarStyle.swift in Sources */,
+				3E795C6B1FC8933700258D81 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
