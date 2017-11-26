@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="o4R-bs-ggc" detailTextLabel="13K-Sr-xi5" style="IBUITableViewCellStyleSubtitle" id="Rqh-0E-KLK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="o4R-bs-ggc" detailTextLabel="13K-Sr-xi5" style="IBUITableViewCellStyleSubtitle" id="Rqh-0E-KLK">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rqh-0E-KLK" id="t43-o2-xgG">
@@ -68,6 +68,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="9F2-IQ-g12">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="iFM-KN-v2x">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="signOutButtonPressed:" destination="BYZ-38-t0r" id="tnu-MY-anM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ncF-EP-B2a">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -126,21 +132,30 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SA2-ZE-Rzb">
+                                <rect key="frame" x="0.0" y="359" width="375" height="264"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SA2-ZE-Rzb" secondAttribute="height" multiplier="125:88" id="vKV-7b-YBc"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ChH-sf-Ez6" firstAttribute="leading" secondItem="swz-3F-1wx" secondAttribute="leading" constant="23" id="3J3-NS-CyV"/>
+                            <constraint firstItem="DKm-VU-MDE" firstAttribute="top" secondItem="SA2-ZE-Rzb" secondAttribute="bottom" id="8LQ-Cz-G3V"/>
                             <constraint firstItem="ChH-sf-Ez6" firstAttribute="top" secondItem="swz-3F-1wx" secondAttribute="top" constant="22" id="Ezk-sA-IPz"/>
                             <constraint firstItem="TT4-vx-Cb3" firstAttribute="centerX" secondItem="DKm-VU-MDE" secondAttribute="centerX" id="Hah-x9-gRD"/>
                             <constraint firstItem="bya-vm-6xx" firstAttribute="top" secondItem="3cB-TQ-Ogd" secondAttribute="bottom" constant="15" id="K8m-aH-ZsX"/>
                             <constraint firstItem="3cB-TQ-Ogd" firstAttribute="leading" secondItem="TT4-vx-Cb3" secondAttribute="leading" id="OWk-d6-GSp"/>
                             <constraint firstItem="3cB-TQ-Ogd" firstAttribute="trailing" secondItem="TT4-vx-Cb3" secondAttribute="trailing" id="SPu-pA-jN4"/>
                             <constraint firstItem="TT4-vx-Cb3" firstAttribute="top" secondItem="3cB-TQ-Ogd" secondAttribute="bottom" constant="42" id="cLO-GW-lXk"/>
+                            <constraint firstItem="SA2-ZE-Rzb" firstAttribute="leading" secondItem="swz-3F-1wx" secondAttribute="leading" id="ea0-oj-BGQ"/>
                             <constraint firstItem="DKm-VU-MDE" firstAttribute="leading" secondItem="eCh-Wo-8Ae" secondAttribute="leading" id="gwq-E2-VA1"/>
                             <constraint firstItem="3cB-TQ-Ogd" firstAttribute="top" secondItem="swz-3F-1wx" secondAttribute="top" constant="49" id="iX2-BV-Z3I"/>
                             <constraint firstItem="DKm-VU-MDE" firstAttribute="bottom" secondItem="swz-3F-1wx" secondAttribute="bottom" id="jf3-r0-ovh"/>
                             <constraint firstItem="3cB-TQ-Ogd" firstAttribute="leading" secondItem="eCh-Wo-8Ae" secondAttribute="leadingMargin" id="sg9-1a-2X6"/>
                             <constraint firstAttribute="trailing" secondItem="DKm-VU-MDE" secondAttribute="trailing" id="wKi-5r-eMX"/>
+                            <constraint firstItem="SA2-ZE-Rzb" firstAttribute="trailing" secondItem="swz-3F-1wx" secondAttribute="trailing" id="wZc-cj-ehm"/>
                             <constraint firstItem="ChH-sf-Ez6" firstAttribute="leading" secondItem="bya-vm-6xx" secondAttribute="leading" id="we7-h0-fR9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="swz-3F-1wx"/>
@@ -161,6 +176,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addressField" destination="TT4-vx-Cb3" id="3it-01-vGT"/>
+                        <outlet property="mapView" destination="SA2-ZE-Rzb" id="ci6-Y9-cYj"/>
                         <outlet property="placeNameField" destination="3cB-TQ-Ogd" id="ymO-xv-vvZ"/>
                     </connections>
                 </viewController>
