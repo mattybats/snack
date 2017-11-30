@@ -2,7 +2,7 @@
 //  PlaceListViewController.swift
 //  Snacktacular
 //
-//  Created by John Gallaugher on 11/24/17.
+//  Created by John Gallaugher on 11/22/17.
 //  Copyright © 2017 John Gallaugher. All rights reserved.
 //
 
@@ -27,7 +27,6 @@ class PlaceListViewController: UIViewController {
         super.viewDidLoad()
         db = Firestore.firestore()
         authUI = FUIAuth.defaultAuthUI()
-        // You need to adopt a FUIDelegate protocol to receive callback
         authUI?.delegate = self
         
         tableView.delegate = self
@@ -101,7 +100,7 @@ class PlaceListViewController: UIViewController {
         // Create the dictionary representing data we want to save
         let dataToSave: [String: Any] = ["placeName": places[index].placeName, "address": places[index].address, "postingUserID": places[index].postingUserID, "latitude": latitude, "longitude": longitude]
         
-        // if we HAVE saved a record, we'll have an ID
+        // if we have saved a record, we'll have an ID
         if places[index].placeDocumentID != "" {
             let ref = db.collection("places").document(places[index].placeDocumentID)
             ref.setData(dataToSave) { (error) in
@@ -111,8 +110,8 @@ class PlaceListViewController: UIViewController {
                     print("Document updated with reference ID \(ref.documentID)")
                 }
             }
-        } else { // Otherwise we don't have a document ID so we need to create the ref ID and save a new document
-            var ref: DocumentReference? = nil // Firestore will creat a new ID for us
+        } else {
+            var ref: DocumentReference? = nil
             ref = db.collection("places").addDocument(data: dataToSave) { (error) in
                 if let error = error {
                     print("ERROR: adding document \(error.localizedDescription)")

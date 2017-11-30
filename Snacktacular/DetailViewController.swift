@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  Snacktacular
 //
-//  Created by John Gallaugher on 11/24/17.
+//  Created by John Gallaugher on 11/22/17.
 //  Copyright © 2017 John Gallaugher. All rights reserved.
 //
 
@@ -170,7 +170,6 @@ extension DetailViewController: MKMapViewDelegate {
 
 extension DetailViewController: GMSAutocompleteViewControllerDelegate {
     
-    // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         placeData?.placeName = place.name
         placeData?.coordinate = place.coordinate
@@ -184,16 +183,13 @@ extension DetailViewController: GMSAutocompleteViewControllerDelegate {
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        // TODO: handle the error.
         print("Error: ", error.localizedDescription)
     }
     
-    // User canceled the operation.
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
         dismiss(animated: true, completion: nil)
     }
     
-    // Turn the network activity indicator on and off again.
     func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
