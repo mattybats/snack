@@ -21,7 +21,7 @@ class PlaceData: NSObject, MKAnnotation {
         return placeName
     }
     
-    var subtitle: String? {
+    var  subtitle: String? {
      return address
     }
     

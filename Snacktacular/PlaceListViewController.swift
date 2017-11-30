@@ -188,7 +188,7 @@ extension PlaceListViewController: FUIAuthDelegate {
         return false
     }
     
-    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+    func  authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
         if let user = user {
             print("*** Successfully logged in with user = \(user.email!)")
         }

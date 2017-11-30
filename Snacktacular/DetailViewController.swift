@@ -180,7 +180,7 @@ extension DetailViewController: GMSAutocompleteViewControllerDelegate {
         mapView.selectAnnotation(self.placeData!, animated: true)
         updateUserInterface()
         dismiss(animated: true, completion: nil)
-    }
+     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
         print("Error: ", error.localizedDescription)
