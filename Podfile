@@ -8,6 +8,6 @@ target 'Snacktacular' do
     pod 'GoogleMaps'
     pod 'Firebase/Core'
     pod 'Firebase/Firestore'
-    pod 'FirebaseUI/Auth'
+    pod 'FirebaseUI/Auth' 
     pod 'FirebaseUI/Google'
 end
